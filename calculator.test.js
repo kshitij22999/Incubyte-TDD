@@ -75,35 +75,35 @@ describe('String-Based Calculator', () => {
         expect(calc.multiply('//*\n10*2')).toBe(20);
     });
 
-    test('should return 0 for an empty string in multiply', () => {
+    test('should return 0 for an empty string in subtract', () => {
         expect(calc.subtract('')).toBe(0);
     });
 
-    test('should return the number itself for a single number input in multiply', () => {
+    test('should return the number itself for a single number input in subtract', () => {
         expect(calc.subtract('5')).toBe(5);
     });
 
-    test('should return the sum of two numbers separated by "," in multiply', () => {
+    test('should return the sum of two numbers separated by "," in subtract', () => {
         expect(calc.subtract('2,3')).toBe(-1);
     });
 
-    test('should return the sum of multiple numbers separated by "," in multiply', () => {
+    test('should return the sum of multiple numbers separated by "," in subtract', () => {
         expect(calc.subtract('1,2,3,4')).toBe(-8);
     });
 
-    test('should accept \n as a delimeters in multiply', () => {
+    test('should accept \n as a delimeters in subtract', () => {
         expect(calc.subtract('1\n2\n3')).toBe(-4);
     });
 
-    test('should accept \n and , as a delimeters in multiply', () => {
+    test('should accept \n and , as a delimeters in subtract', () => {
         expect(calc.subtract('1\n2,3')).toBe(-4);
     });
 
-    test('should handle custom delimeters in multiply', () => {
+    test('should handle custom delimeters in subtract', () => {
         expect(calc.subtract('//;\n1;2')).toBe(-1);
     });
 
-    test('should handle custom delimeters in multiply', () => {
+    test('should handle custom delimeters in subtract', () => {
         expect(calc.subtract('//*\n10*2')).toBe(8);
     });
 });
